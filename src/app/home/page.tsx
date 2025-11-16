@@ -6,7 +6,7 @@ import React, {
 } from 'react';
 import styles from './home.module.css';
 import Image from 'next/image';
-
+import {useRouter} from 'next/navigation';
 import Card from '@/components/categoryCard';
 import {cardList} from './home.config';
 
@@ -14,6 +14,7 @@ export default function Home() {
     const profileContainer = useRef<HTMLDivElement>(null);
     const nameRef = useRef<HTMLHeadingElement>(null);
     const courseRef = useRef<HTMLHeadingElement>(null);
+    const router = useRouter();
 
     const [currentTime, setCurrentTime] = useState<Date | null>(null);
 
@@ -29,7 +30,8 @@ export default function Home() {
     function handleCardClick(index: number) {
       switch(index){
         case 1:
-
+          router.push("/resume");
+          break;
       }
     }
 
@@ -98,7 +100,7 @@ export default function Home() {
 
             <div className={styles.categoryContainer}>
               {cardList.map((card, index) => (
-                <div className={styles.grid} key={index} onClick={handleCardClick(index)}>
+                <div className={styles.grid} key={index} onClick={() => handleCardClick(index)}>
                   <Card
                     title={card.title}
                     description={card.description}

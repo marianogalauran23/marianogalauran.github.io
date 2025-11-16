@@ -41,6 +41,8 @@ export default function Home() {
         case 3:
           router.push("/credentials");
           break;
+        default:
+          console.log("error click handling encoundered an unexpexted index")
       }
     }
 

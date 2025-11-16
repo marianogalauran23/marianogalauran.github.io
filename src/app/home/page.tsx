@@ -29,8 +29,17 @@ export default function Home() {
 
     function handleCardClick(index: number) {
       switch(index){
+        case 0:
+          router.push("/me");
+          break;
         case 1:
-          router.push("/resume");
+          router.push("/projects");
+          break;
+        case 2:
+          router.push("/designs");
+          break;
+        case 3:
+          router.push("/credentials");
           break;
       }
     }

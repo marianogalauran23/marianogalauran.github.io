@@ -13,7 +13,7 @@ export const cardList: CardProps[] = [
     fontColor: "#d9deffff",
   },
   {
-    title: "Personal Projects",
+    title: "Projects",
     description: "Explore the tools, systems, and experiments I've built.",
     bgpath: "/categories/Projects.jpg",
     fontColor: "rgba(206, 201, 135, 1)",

@@ -1,0 +1,11 @@
+node_modules
+
+# Ignore build outputs
+.next
+out
+dist
+
+# Ignore secret files
+.env
+.git
+.github
